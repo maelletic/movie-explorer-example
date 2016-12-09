@@ -4,10 +4,11 @@
     <meta charset="utf-8">
     <title></title>
     <meta name="description" content="">
-    <meta name="viewport" content="width=device-width">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
     <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
     <!-- build:css(.) styles/vendor.css -->
     <!-- bower:css -->
+    <link rel="stylesheet" href="bower_components/components-font-awesome/css/font-awesome.css" />
     <!-- endbower -->
     <!-- endbuild -->
     <!-- build:css(.tmp) styles/main.css -->
@@ -15,29 +16,55 @@
     <!-- endbuild -->
     <base href="/">
   </head>
-  <body ng-app="movieExplorerApp">
+  <body ng-app="movieExplorerApp" class="main">
     <!--[if lte IE 8]>
       <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
     <![endif]-->
 
     <!-- Tout le code html qui est integré ici est commun à l'ensemble des pages-->
     <div class="header">
-      <div class="navbar navbar-default" role="navigation">
-        <div class="container">
-          <div class="navbar-header">
-
-            <a class="navbar-brand" href="#/">movieExplorer</a>
-          </div>
-
-          <div class="collapse">
-
-            <ul class="nav navbar-nav">
-              <li class="active"><a href="#/">Home</a></li>
-            </ul>
-          </div>
-        </div>
-      </div>
-    </div>
+		<div class="navbar navbar-default" role="navigation">
+		  <div class="navbar_brand">
+			<a href="#/">Movie Explorer</a>
+		  </div>
+		  
+		  <div class="navbar_toggle-menu hidden-lg hidden-xl">
+			<i class=" fa fa-bars" aria-hidden="true">
+			</i>
+		  </div>
+		  
+		  <div class="navbar_search hidden-xs">
+			<i class=" fa fa-search" aria-hidden="true">
+				<input type="text" name="search" placeholder="Search movies, TV Shows, actor..."/>
+			</i>
+		  </div>
+		  
+		  <div class="navbar_menu collapse hidden-xs hidden-sm hidden-md">
+			<ul class="menu">
+				<li class="menu_item">
+					<a href="#/" class="fa fa-home">
+						<span class="label">Home</span>
+					</a>
+				</li>
+				<li class="menu_item">
+					<a href="#/" class="fa fa-binoculars">
+						<span class="label">Explore</span>
+					</a>
+				</li>
+				<li class="menu_item">
+					<a href="#/" class="fa fa-bar-chart">
+						<span class="label">Top 100</span>
+					</a>
+				</li>
+				<li class="menu_item">
+					<a href="#/" class="fa fa-user">
+						<span class="label">My Account</span>
+					</a>
+				</li>
+			</ul>
+		  </div>
+		</div>
+	</div>
 
     <div class="container">
       <!-- C'est ici que le contenu de la vue est injectée -->

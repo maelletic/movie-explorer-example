@@ -28,11 +28,11 @@
 		@include transition(opacity $ease-out-sine 0.35s);
 		&.side-menu-visible {
 			opacity: 0.2;
-		}
+		}   
 	}
 }
 
 @import 'header.scss';
 @import 'sidescreen.scss';
 @import 'home.scss';
-@import 'responsive.scss';s);
+@import 'responsive.scss';

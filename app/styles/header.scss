@@ -9,6 +9,7 @@
 		@include padding($headerTopPadding 15px $headerBottomPadding 15px);
 		@include box-sizing(border-box);
 		@include box-shadow(0px 2px 2px -2px $colorDarkGray);
+		z-index: 3;
 			
 		.navbar {
 			width: 100%;

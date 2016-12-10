@@ -14,25 +14,19 @@ angular.module('movieExplorerApp')
     var ctrl = this;
 
     ctrl.movie = {};
+	ctrl.images = [];
 
     movies.getMovie($routeParams.movieId).then(function(result)
     {
       ctrl.movie = result;
+	  angular.forEach(ctrl.movie.images.backdrops, function(backdrop)
+	  {
+		movies.getImageURL(backdrop,'w300').then(function(imagePath)
+		{
+			ctrl.images.push(imagePath);
+		});
+	  });
     });
-
-    movies.getConfiguration().then(function(result){
-      ctrl.configuration = result;
-    });
-
-    ctrl.getImageURL = function(image, size)
-    {
-      if(ctrl.configuration)
-      {
-        return ctrl.configuration.images.secure_base_url + size + image.file_path;
-      }else{
-        return null;
-      }
-    };
 
   });
 

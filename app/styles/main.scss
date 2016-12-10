@@ -25,9 +25,14 @@
 	
 	.content {
 		@include margin($headerBoxHeight null null null);
+		@include transition(opacity $ease-out-sine 0.35s);
+		&.side-menu-visible {
+			opacity: 0.2;
+		}
 	}
 }
 
 @import 'header.scss';
 @import 'sidescreen.scss';
-@import 'responsive.scss';
+@import 'home.scss';
+@import 'responsive.scss';s);

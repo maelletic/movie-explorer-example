@@ -5,6 +5,13 @@ Ce template est associé à un controleur nommé main (voir app.js).
 Ce fichier modifié/complété pour construire n'importe quelle structure html/css.
 -->
 
+<div class=slideshow">
+	<div class="slideshow_item" ng-repeat="slide in main.slides track by $index"
+		ng-if="main.slideIsVisible($index)" ng-class="main.getSlideClass($index)">
+		<img ng-src="{{slide}}" ng-click="main.gotoSlide($index)"/>
+	</div>
+</div>
+
 <div class="movie-list">
   <div class="movie-item" ng-repeat="movie in main.movies track by movie.id">
     <a ng-href="#/movie/{{movie.id}}"><div ng-bind="movie.title"></div></a>

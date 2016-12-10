@@ -1,0 +1,82 @@
+@import 'common.scss';
+
+.main {
+	.sidescreen{
+		background-color: $colorLightDark;
+		color: $colorWhite;
+		min-width: 300px;
+		height: 100vh;
+		z-index: 10;
+
+		&.right {
+			position: fixed;
+			right: 0px;
+			top: 0px;
+		}
+	
+		ul {
+			li {
+				display: block;
+			}
+		}
+		
+		.fa {
+			color: $colorWhite;
+			cursor: pointer;
+			.label {
+				font-family: $fontDefault;
+				text-transform: uppercase;
+				font-size: 1.2em;
+			}
+		}
+		
+		.sidescreen_topbar {
+			@include box-sizing(border-box);
+			width: 100%;
+			text-align: center;
+			@include padding(20px 10px 30px 10px);
+			font-size: 1.5em;
+			background-color: $colorDark;
+			.fa {
+				width:100%;
+				&::before {
+					float: left;
+					position: relative;
+					top: -10px;
+				}
+			}
+		}
+		
+		.sidescreen_menu {
+			.menu {
+				padding:0px;
+				margin:0px;
+				
+				.menu_item {
+					@include padding(20px 10px 30px 30px);
+					@include border-width(0px 0px 1px 0px);
+					@include border-style(null null solid null);
+					@include border-color($colorDark);
+					@include hover-transition(background-color);
+					
+					.fa::before {
+						margin-right: 20px;
+					}
+					
+					&:hover {
+						cursor: pointer;
+						background-color: $colorDark;
+					}
+				}
+			}
+		}
+		
+		&.ng-hide-add, &.ng-hide-remove, &.ng-hide {
+			@include transition(all $ease-out-sine 0.35s);
+		}
+		
+		&.ng-hide {
+			@include transform(translateX(100%));
+		}
+	}
+}

@@ -1,0 +1,50 @@
+@import 'common.scss';
+
+@media only screen and (max-width: $sizeXS)
+{
+	.hidden-xs {
+		display: none !important;
+	}
+	
+	.navbar_brand {
+		a {
+		font-size: 1em !important;
+		top: 0px !important;
+		}
+	}
+}
+
+@media only screen and (min-width: $sizeXS + 1)and (max-width: $sizeSM)
+{
+	.hidden-sm {
+		display: none !important;
+	}
+	
+		.navbar_brand {
+		a {
+		font-size: 1em !important;
+		top: 0px !important;
+		}
+	}
+}
+
+@media only screen and (min-width: $sizeSM + 1)and (max-width: $sizeMD)
+{
+	.hidden-md {
+		display: none !important;
+	}
+}
+
+@media only screen and (min-width: $sizeMD + 1)and (max-width: $sizeLG)
+{
+	.hidden-lg {
+		display: none !important;
+	}
+}
+
+@media only screen and (min-width: $sizeLG + 1)
+{
+	.hidden-xl {
+		display: none !important;
+	}
+}

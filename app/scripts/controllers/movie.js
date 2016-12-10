@@ -1,5 +1,7 @@
 'use strict';
 
+//jscs:disable requireCamelCaseOrUpperCaseIdentifiers
+
 /**
  * @ngdoc function
  * @name movieExplorerApp.controller:MovieCtrl
@@ -33,3 +35,5 @@ angular.module('movieExplorerApp')
     };
 
   });
+
+  // jscs:enable requireCamelCaseOrUpperCaseIdentifiers

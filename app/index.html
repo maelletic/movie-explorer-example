@@ -22,7 +22,7 @@
     <![endif]-->
 
     <!-- Tout le code html qui est integré ici est commun à l'ensemble des pages-->
-    <div class="header">
+    <div class="header" ng-class="{'side-menu-visible': executionContext.sideMenuIsVisible}">
 		<div class="navbar navbar-default" role="navigation">
 		  <div class="navbar_brand">
 			<a href="#/">Movie Explorer</a>
@@ -34,9 +34,12 @@
 		  </div>
 		  
 		  <div class="navbar_search hidden-xs">
-			<i class=" fa fa-search" aria-hidden="true">
-				<input type="text" name="search" placeholder="Search movies, TV Shows, actor..."/>
-			</i>
+			<form action="#" name="search_form" method="get">
+				<i class=" fa fa-search" aria-hidden="true">
+					<input type="text" name="search" placeholder="Search movies, TV Shows, actor..."/>
+					<input type="submit" name="submit_search"/>
+				</i>
+			</form>
 		  </div>
 		  
 		  <div class="navbar_menu collapse hidden-xs hidden-sm hidden-md">

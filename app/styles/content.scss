@@ -1,0 +1,23 @@
+@import 'common.scss';
+
+.main {
+	.content {
+		@include margin($headerBoxHeight null null null);
+		@include transition(opacity $ease-out-sine 0.35s);
+		&.side-menu-visible {
+			opacity: 0.2;
+		}   
+		a {
+		 text-align: center;
+		 font-family: $fontLogo;
+		 color: $colorBlack;
+		 font-size: 1.2em;
+		 &:hover {
+			text-shadow:1px 1px 2px black, 0 0 1em red, 0 0 0.2em red;
+		 }
+		}
+		.movie {
+			padding: 10px;		
+		}
+	}
+}

@@ -75,6 +75,7 @@ angular.module('movieExplorerApp')
 	{
 		ctrl.currentSlide = index;
 	};
+	
   });
 
   // jscs:enable requireCamelCaseOrUpperCaseIdentifiers

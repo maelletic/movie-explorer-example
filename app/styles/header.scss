@@ -10,6 +10,10 @@
 		@include box-sizing(border-box);
 		@include box-shadow(0px 2px 2px -2px $colorDarkGray);
 		z-index: 3;
+		@include transition(opacity $ease-out-sine 0.35s);
+		&.side-menu-visible {
+			opacity: 0.2;
+		}   
 			
 		.navbar {
 			width: 100%;
@@ -92,7 +96,7 @@
 			.navbar_search {
 				float: right;
 				position: relative;
-				top: 6px;
+				top: 9px;
 				.fa::before {
 					color: $colorDarkGray;
 				}

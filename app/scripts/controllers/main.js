@@ -15,7 +15,6 @@ angular.module('movieExplorerApp')
 
     ctrl.movies = [];
 	ctrl.slides = [];
-	ctrl.search = [];
 
     movies.getDiscoverMovies().then(function(result)
     {
@@ -76,11 +75,6 @@ angular.module('movieExplorerApp')
 	{
 		ctrl.currentSlide = index;
 	};
-	
-	 movies.getSearch().then(function(result)
-    {
-      ctrl.search = result;
-	});
 	
   });
 

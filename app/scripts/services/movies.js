@@ -58,7 +58,7 @@ angular.module('movieExplorerApp')
     {
       return $http.get('https://api.themoviedb.org/3/search/movie?api_key=56df680a53931a6ccba41fb6dfa6686d&language=fr-FR&query=doctor-strange').then(function(response)
       {
-        return response.data.results;
+        return response;
       });
     };
   });
